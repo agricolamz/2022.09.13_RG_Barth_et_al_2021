@@ -1,0 +1,120 @@
+---
+title: "Reading group: [@barth21]"
+author: "G. Moroz"
+institute: "Linguistic Convergence Laboratory, NRU HSE"
+date: "13 September 2022"
+output: 
+  beamer_presentation:
+    df_print: kable
+    latex_engine: xelatex
+    citation_package: natbib
+    includes:
+      in_header: "config/presento.sty"
+always_allow_html: true
+bibliography: bibliography.bib
+csl: apa.csl
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, dev='cairo_pdf')
+```
+
+# Context of the paper
+
+## Family Problems picture task, [@san12]
+
+This tasks was developed for a research of the grammaticized expression of **social cognition**, that combines
+
+- “social facts” such as kinship relationships;
+- “psychological facts” (such as feelings, desires, or attentional states);
+- and something else. \pause
+
+Authors wanted to create a task that stimulates production
+
+- of different speech types (descriptions, dialogic interactions, narrative);
+- of linguistic expressions relevant to the domain of social cognition;
+- of parallel spontaneous texts (in the broad sense) across languages.
+
+## Family Problems picture task, [@san12: 144--145]
+
+"Two participants (A and B) sit together, either side-by-side or oriented slightly toward each other, with an open flat space (e.g., the ground, a table) in front of
+them. The activity involves three components:
+
+> (i) the participants are given the pictures one at a time and describe the content of each;
+> (ii) the participants are asked to arrange the pictures as an ordered narrative, working together;
+> (iii) participants are asked to tell the story from start to finish, from both third-
+person and first-person perspectives, typically to an audience that had not
+seen the pictures or heard the story before."
+
+## Presentation order, [@san12]
+
+\centering
+```{r, out.width="16%", out.height="21.5%"}
+knitr::include_graphics("images/01_homecoming.jpg", dpi = 100)
+knitr::include_graphics("images/02_clothes.jpg", dpi = 100)
+knitr::include_graphics("images/03_in_jail.jpg", dpi = 100)
+knitr::include_graphics("images/04_drunk_gossip.jpg", dpi = 100)
+```
+```{r, out.width="16%", out.height="21.5%"}
+knitr::include_graphics("images/05_courtroom.jpg", dpi = 100)
+knitr::include_graphics("images/06_walk_together.jpg", dpi = 100)
+knitr::include_graphics("images/07_drink.jpg", dpi = 100)
+knitr::include_graphics("images/08_garden.jpg", dpi = 100)
+```
+```{r, out.width="16%", out.height="21.5%"}
+knitr::include_graphics("images/09_arrest.jpg", dpi = 100)
+knitr::include_graphics("images/10_think_jail.jpg", dpi = 100)
+knitr::include_graphics("images/11_refuse_drink.jpg", dpi = 100)
+knitr::include_graphics("images/12_punch.jpg", dpi = 100)
+```
+```{r, out.width="16%", out.height="21.5%"}
+knitr::include_graphics("images/13_family_talk.jpg", dpi = 100)
+knitr::include_graphics("images/14_stand_happy.jpg", dpi = 100)
+knitr::include_graphics("images/15_about_to_hit.jpg", dpi = 100)
+knitr::include_graphics("images/16_think_home.jpg", dpi = 100)
+```
+
+
+## Canonical order, [@san12]
+
+\centering
+```{r, out.width="16%", out.height="21.5%"}
+knitr::include_graphics("images/08_garden.jpg", dpi = 100)
+knitr::include_graphics("images/06_walk_together.jpg", dpi = 100)
+knitr::include_graphics("images/07_drink.jpg", dpi = 100)
+knitr::include_graphics("images/04_drunk_gossip.jpg", dpi = 100)
+```
+```{r, out.width="16%", out.height="21.5%"}
+knitr::include_graphics("images/15_about_to_hit.jpg", dpi = 100)
+knitr::include_graphics("images/12_punch.jpg", dpi = 100)
+knitr::include_graphics("images/09_arrest.jpg", dpi = 100)
+knitr::include_graphics("images/05_courtroom.jpg", dpi = 100)
+```
+```{r, out.width="16%", out.height="21.5%"}
+knitr::include_graphics("images/10_think_jail.jpg", dpi = 100)
+knitr::include_graphics("images/03_in_jail.jpg", dpi = 100)
+knitr::include_graphics("images/16_think_home.jpg", dpi = 100)
+knitr::include_graphics("images/14_stand_happy.jpg", dpi = 100)
+```
+```{r, out.width="16%", out.height="21.5%"}
+knitr::include_graphics("images/01_homecoming.jpg", dpi = 100)
+knitr::include_graphics("images/14_stand_happy.jpg", dpi = 100)
+knitr::include_graphics("images/13_family_talk.jpg", dpi = 100)
+knitr::include_graphics("images/11_refuse_drink.jpg", dpi = 100)
+```
+
+## The Social Cognition Parallax Interview Corpus (SCOPIC)
+
+This corpus was developed in [@barth17] and produced 
+
+- [corpus](https://scopicproject.wordpress.com/)
+- [@barth21] (we are currently reading);
+- and a lot of papers in journal of *Asian and African Languages and Linguistics* dedicated to specific languages of the corpus.
+
+**Parallax corpus** -- comparable corpus 
+
+By ‘parallax corpus’ we mean ‘broadly comparable formulations resulting from a comparable task’, to avoid the implications of ‘parallel corpus’ that there will be exact semantic equivalence across languages.
+
+# References {.allowframebreaks}
