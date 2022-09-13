@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, dev='cairo
 
 ## Family Problems picture task, [@san12]
 
-This tasks was developed for a research of the grammaticized expression of **social cognition**, that combines
+This task was developed for a research of the grammaticized expression of **\underline{social cognition}**, that combines
 
 - “social facts” such as kinship relationships;
 - “psychological facts” (such as feelings, desires, or attentional states);
@@ -33,22 +33,53 @@ This tasks was developed for a research of the grammaticized expression of **soc
 
 Authors wanted to create a task that stimulates production
 
-- of different speech types (descriptions, dialogic interactions, narrative);
+- of different speech types (descriptions, dialogic interactions, narratives);
 - of linguistic expressions relevant to the domain of social cognition;
-- of parallel spontaneous texts (in the broad sense) across languages.
+- of some known interesting grammatical categories (e.g. evidentiality);
+- of parallel but spontaneous texts (in the broad sense) across different languages.
 
-## Family Problems picture task, [@san12: 144--145]
+## Family Problems picture task, [@san12]
 
 "Two participants (A and B) sit together, either side-by-side or oriented slightly toward each other, with an open flat space (e.g., the ground, a table) in front of
 them. The activity involves three components:
 
-> (i) the participants are given the pictures one at a time and describe the content of each;
-> (ii) the participants are asked to arrange the pictures as an ordered narrative, working together;
-> (iii) participants are asked to tell the story from start to finish, from both third-
+(i) the participants are given the pictures one at a time and describe the content of each;
+(ii) the participants are asked to arrange the pictures as an ordered narrative, working together;
+(iii) participants are asked to tell the story from start to finish, from both third-
 person and first-person perspectives, typically to an audience that had not
-seen the pictures or heard the story before."
+seen the pictures or heard the story before." [@san12: 144--145]
 
-## Presentation order, [@san12]
+
+
+## Canonical order defined by [@san12]
+
+\centering
+```{r, out.width="16%", out.height="21.5%"}
+knitr::include_graphics("images/08_garden.jpg", dpi = 100)
+knitr::include_graphics("images/06_walk_together.jpg", dpi = 100)
+knitr::include_graphics("images/07_drink.jpg", dpi = 100)
+knitr::include_graphics("images/04_drunk_gossip.jpg", dpi = 100)
+```
+```{r, out.width="16%", out.height="21.5%"}
+knitr::include_graphics("images/15_about_to_hit.jpg", dpi = 100)
+knitr::include_graphics("images/12_punch.jpg", dpi = 100)
+knitr::include_graphics("images/09_arrest.jpg", dpi = 100)
+knitr::include_graphics("images/05_courtroom.jpg", dpi = 100)
+```
+```{r, out.width="16%", out.height="21.5%"}
+knitr::include_graphics("images/10_think_jail.jpg", dpi = 100)
+knitr::include_graphics("images/03_in_jail.jpg", dpi = 100)
+knitr::include_graphics("images/16_think_home.jpg", dpi = 100)
+knitr::include_graphics("images/02_clothes.jpg", dpi = 100)
+```
+```{r, out.width="16%", out.height="21.5%"}
+knitr::include_graphics("images/14_stand_happy.jpg", dpi = 100)
+knitr::include_graphics("images/01_homecoming.jpg", dpi = 100)
+knitr::include_graphics("images/13_family_talk.jpg", dpi = 100)
+knitr::include_graphics("images/11_refuse_drink.jpg", dpi = 100)
+```
+
+## Presentation order defined by [@san12]
 
 \centering
 ```{r, out.width="16%", out.height="21.5%"}
@@ -76,45 +107,109 @@ knitr::include_graphics("images/15_about_to_hit.jpg", dpi = 100)
 knitr::include_graphics("images/16_think_home.jpg", dpi = 100)
 ```
 
+## The Social Cognition Parallax\footnote[frame]{By ‘parallax corpus’ we mean ‘broadly comparable formulations resulting from a comparable task’, to avoid the implications of ‘parallel corpus’ that there will be exact semantic equivalence across languages. (Barth and Evans 2017: 1)} Interview Corpus (SCOPIC)
 
-## Canonical order, [@san12]
+There are just seven languages in [@san12]. The main drivers of this project (D. Barth and N. Evans) got funding, and as a result in [@barth17] they claimed to have 24 (and over 30 languages now).
 
-\centering
-```{r, out.width="16%", out.height="21.5%"}
-knitr::include_graphics("images/08_garden.jpg", dpi = 100)
-knitr::include_graphics("images/06_walk_together.jpg", dpi = 100)
-knitr::include_graphics("images/07_drink.jpg", dpi = 100)
-knitr::include_graphics("images/04_drunk_gossip.jpg", dpi = 100)
-```
-```{r, out.width="16%", out.height="21.5%"}
-knitr::include_graphics("images/15_about_to_hit.jpg", dpi = 100)
-knitr::include_graphics("images/12_punch.jpg", dpi = 100)
-knitr::include_graphics("images/09_arrest.jpg", dpi = 100)
-knitr::include_graphics("images/05_courtroom.jpg", dpi = 100)
-```
-```{r, out.width="16%", out.height="21.5%"}
-knitr::include_graphics("images/10_think_jail.jpg", dpi = 100)
-knitr::include_graphics("images/03_in_jail.jpg", dpi = 100)
-knitr::include_graphics("images/16_think_home.jpg", dpi = 100)
-knitr::include_graphics("images/14_stand_happy.jpg", dpi = 100)
-```
-```{r, out.width="16%", out.height="21.5%"}
-knitr::include_graphics("images/01_homecoming.jpg", dpi = 100)
-knitr::include_graphics("images/14_stand_happy.jpg", dpi = 100)
-knitr::include_graphics("images/13_family_talk.jpg", dpi = 100)
-knitr::include_graphics("images/11_refuse_drink.jpg", dpi = 100)
-```
+- [\alert{corpus website}](https://scopicproject.wordpress.com/);
+- recordings and some annotations are available in [\alert{PARADISEC catalog}](http://catalog.paradisec.org.au/collections/SocCog);
+- 31 publications including [@barth21].
 
 ## The Social Cognition Parallax Interview Corpus (SCOPIC)
 
-This corpus was developed in [@barth17] and produced 
+30 languages of the database (present in PARADISEC catalog):
 
-- [corpus](https://scopicproject.wordpress.com/)
-- [@barth21] (we are currently reading);
-- and a lot of papers in journal of *Asian and African Languages and Linguistics* dedicated to specific languages of the corpus.
+```{r, eval = FALSE}
+library(tidyverse)
+library(lingtypology)
+read_delim("Auslan - asf
+Arta - atz
+Avatime - avn
+Bali - ban
+Chinese, Mandarin - cmn
+Dahalo - dal
+Dargwa - dar
+German, Standard - deu
+Duna - duc
+English - eng
+Fas - fqs
+Iwaidja - ibd
+Idi - idi
+Ilocano - ilo
+Indonesian - ind
+Japanese - jpn
+Jingpho - kac
+Kannada - kan
+Korean - kor
+Matukar - mjk
+Murrinh-Patha - mwf
+Burmese - mya
+Sibe - nco
+Ngalkbun - ngk
+Kriol - rop
+Xibe - sjo
+Spanish - spa
+Wára - tci
+Tok Pisin - tpi
+Yuracare - yuz", delim = " - ", col_names = FALSE) %>% 
+  pull(X2) %>% 
+  lang.iso() ->
+  languages
 
-**Parallax corpus** -- comparable corpus 
+map.feature(languages)
+```
 
-By ‘parallax corpus’ we mean ‘broadly comparable formulations resulting from a comparable task’, to avoid the implications of ‘parallel corpus’ that there will be exact semantic equivalence across languages.
+```{r, out.width="95%"}
+knitr::include_graphics("images/18_scopic_langs.png")
+```
+
+created with `lingtypology`
+
+## The Social Cognition Parallax Interview Corpus (SCOPIC)
+
+13 languages from [@barth21]:
+
+```{r, eval = FALSE}
+library(tidyverse)
+library(lingtypology)
+read_delim("Auslan - asf
+Arta - atz
+Avatime - avn
+Bali - ban
+Dalabon - dal
+Dargwa - dar
+Japanese - jpn
+Jingpho - kac
+Kogi - kog
+Matukar - mjk
+Murrinh-Patha - mwf
+Russian - rus
+Yuracare - yuz", delim = " - ", col_names = FALSE) %>% 
+  pull(X2) %>% 
+  lang.iso() ->
+  languages
+
+map.feature(languages)
+```
+
+```{r, out.width="95%"}
+knitr::include_graphics("images/19_barth_langs.png")
+```
+
+created with `lingtypology`
+
+# Goal of the paper
+
+## Goal of the paper
+
+The authors make it clear on the second page of the paper:
+
+- "Can we measure the relative contributions of language structures and individual variation to how people formulate statements about the world?
+- Do accounts of typological differences need to take individual variation into account, and is such variation more prevalent in some kinds of linguistic domains than others?" [@barth21: 181] \pause
+
+```{r, out.width="90%", fig.cap="Language and individuals affect usage frequency and each other."}
+knitr::include_graphics("images/17_fig1_from_the_paper.png")
+```
+
 
 # References {.allowframebreaks}
