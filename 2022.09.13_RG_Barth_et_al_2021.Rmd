@@ -327,13 +327,16 @@ ggpubr::ggarrange(p1, p2, p3, p4)
 
 In the paper they examined four domains:
 
-* Propositional framing (grammatical)
-* Reported speech, thought, and action constructions (grammatical)
-* Reported speech, thought, and action predicates (semantic)
-* Human reference lexical choice (semantic)
+- Propositional framing (grammatical), 6 languages: usage of subordination vs paratactic structures.
+- Reported speech, thought, and action constructions (grammatical), 12 languages: usage of direct vs indirect speech.
+- Reported speech, thought, and action predicates (lexical/semantic), 12 languages: usage of cognitive vs. quotative predicates.
+- Human reference lexical choice (semantic/lexical), 11 languages: usage of kinship terms vs. others
 
 ## Results
 
-
+- *Mod-LI* is the best across all four domains. They make a conclusion that researchers need to take into account individual variation in typological studies.
+- All analyzed variables are scales and languages/individuals take different position on those scales.
+- Some languages seem to have more inter-speaker variability than others.
+- Genre and the picture card stimuli influence linguistic behaviour for semantic domains, but not for grammatical ones.
 
 # References {.allowframebreaks}
