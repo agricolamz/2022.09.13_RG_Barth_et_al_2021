@@ -19,6 +19,8 @@ editor_options:
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, dev='cairo_pdf')
+library(tidyverse)
+theme_set(theme_bw())
 ```
 
 # Context of the paper
@@ -210,6 +212,128 @@ The authors make it clear on the second page of the paper:
 ```{r, out.width="90%", fig.cap="Language and individuals affect usage frequency and each other."}
 knitr::include_graphics("images/17_fig1_from_the_paper.png")
 ```
+
+# Modeling
+
+## Variation
+
+Imagine some variation pattern (e.g. [pəˈteɪ.toʊ] vs [pəˈtaː.toʊ]).
+
+> - some speakers (Type 1) could use just one variant
+> - some speakers (Type 2) can use both variants with some probability... 0.7 of [eɪ]
+> - there should be some proportion of speakers of Type 1 (0.3 - [eɪ], 0.1 - [aː]) and Type 2 (0.6)
+> - But we don't know anything like this just observe real usage!
+
+## Variation
+
+So we can run some tests, obtain some results and create a language model:
+
+```{r, fig.height=6}
+set.seed(42)
+data <- sample(c(rbeta(32, 6,4), rbeta(6, 9, 1), rbeta(2, 1, 9)))
+fake_data <- sample(c(rbeta(123, 6,4), rbeta(6, 9, 1), rbeta(2, 1, 9)))
+
+beta_est <- fitdistrplus::fitdist(fake_data, distr = 'beta', method = 'mle')
+
+tibble(ratios = data) %>% 
+  ggplot(aes(ratios))+
+  stat_function(fun = dbeta, args = list(shape1 = beta_est$estimate[1], shape2=  beta_est$estimate[2]), color = "red", size = 2)+
+  geom_dotplot()+
+  annotate(geom = "label", x = 0.3, y = 1.7, label = "language\nmodel", size = 8)+
+  annotate(geom = "segment", x = 0.7, xend = 0.7, y = 2, yend = 0.5,
+           arrow = arrow(length = unit(0.3, "cm"), type = "closed"))+
+  annotate(geom = "segment", x = 0.5, xend = 0.5, y = 1.5, yend = 0.7,
+           arrow = arrow(length = unit(0.3, "cm"), type = "closed"))+
+  annotate(geom = "segment", x = 0.6, xend = 0.6, y = 1.8, yend = 0.7,
+           arrow = arrow(length = unit(0.3, "cm"), type = "closed"))+
+    annotate(geom = "segment", x = 0.8, xend = 0.8, y = 1.6, yend = 0.4,
+           arrow = arrow(length = unit(0.3, "cm"), type = "closed"))+
+  theme(text = element_text(size = 20))+
+  labs(x = "probability of [eɪ]",
+       y = "") ->
+  p1
+p1
+``` 
+
+## Variation
+
+We can expect slightly different models for different English dialects:
+
+```{r}
+set.seed(42)
+data <- sample(c(rbeta(32, 5,5), rbeta(6, 9, 1), rbeta(2, 1, 9)))
+fake_data <- sample(c(rbeta(123, 5,5), rbeta(6, 9, 1), rbeta(2, 1, 9)))
+
+beta_est <- fitdistrplus::fitdist(fake_data, distr = 'beta', method = 'mle')
+
+tibble(ratios = data) %>% 
+  ggplot(aes(ratios))+
+  stat_function(fun = dbeta, args = list(shape1 = beta_est$estimate[1], shape2=  beta_est$estimate[2]), color = "red", size = 2)+
+  geom_dotplot()+
+  theme(text = element_text(size = 20))+
+  labs(x = "probability of [eɪ]",
+       y = "") ->
+  p2
+
+set.seed(42)
+data <- sample(c(rbeta(32, 3,8), rbeta(6, 9, 1), rbeta(2, 1, 9)))
+fake_data <- sample(c(rbeta(123, 3,8), rbeta(6, 9, 1), rbeta(2, 1, 9)))
+
+beta_est <- fitdistrplus::fitdist(fake_data, distr = 'beta', method = 'mle')
+
+tibble(ratios = data) %>% 
+  ggplot(aes(ratios))+
+  stat_function(fun = dbeta, args = list(shape1 = beta_est$estimate[1], shape2=  beta_est$estimate[2]), color = "red", size = 2)+
+  geom_dotplot()+
+  theme(text = element_text(size = 20))+
+  labs(x = "probability of [eɪ]",
+       y = "") ->
+  p3
+
+set.seed(42)
+data <- sample(c(rbeta(32, 8,3), rbeta(6, 9, 1), rbeta(2, 1, 9)))
+fake_data <- sample(c(rbeta(123, 8,3), rbeta(6, 9, 1), rbeta(2, 1, 9)))
+
+beta_est <- fitdistrplus::fitdist(fake_data, distr = 'beta', method = 'mle')
+
+tibble(ratios = data) %>% 
+  ggplot(aes(ratios))+
+  stat_function(fun = dbeta, args = list(shape1 = beta_est$estimate[1], shape2=  beta_est$estimate[2]), color = "red", size = 2)+
+  geom_dotplot()+
+  theme(text = element_text(size = 20))+
+  labs(x = "probability of [eɪ]",
+       y = "") ->
+  p4
+
+ggpubr::ggarrange(p1, p2, p3, p4)
+```
+
+## Modeling in [@barth21]
+
+- In  [@barth21] they use logistic mixed effect regressions:
+
+|   name   |  PREDICT  | fixed ef.    |  random ef.|  random ef.  |
+|:--------:|:---------:|:------------:|:----------:|:------------:|
+|  *Mod-L* | variation |   language   |            | stimuli card |
+| *Mod-LI* | variation |   language   | individual | stimuli card |
+|  *Mod-I* | variation |              | individual | stimuli card |
+
+> - Compare models
+> - Show model estimates with confidence intervals for the contribution of language
+
+# Domains
+
+## Domains examined
+
+In the paper they examined four domains:
+
+* Propositional framing (grammatical)
+* Reported speech, thought, and action constructions (grammatical)
+* Reported speech, thought, and action predicates (semantic)
+* Human reference lexical choice (semantic)
+
+## Results
+
 
 
 # References {.allowframebreaks}
